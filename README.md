@@ -7,6 +7,7 @@
 - 인터럽트
 - 타이머 / 카운터 8Bit
 - 타이머 / 카운터 16Bit
+- PWD
 - PIEZO
 - UART
 - MOTER
