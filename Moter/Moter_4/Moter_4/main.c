@@ -29,13 +29,13 @@ int main(void)
 	TCNT1L = 0x0D;  //  64269 = 0xFB0D
 	TIMSK = 0x05;   //  TOIE1, TOIE0 모두 '1'
 	TIFR = 0x05;    //  TOV1, TOV0 모두 '1'
-	sei();
+	sei();          // 전체 인터럽트를 허용
 	while (1) {}
 }
 
 SIGNAL(TIMER0_OVF_vect)
 {
-	cli();
+	cli();           // 전체 인터럽트를 금지
 	TCNT0 = 112;     //  256-144=112 -> 0.01초 마다 한번씩 인터럽트 발생
 	timer0Cnt++;     //  timer0Cnt 변수를 1 증가
 	if(timer0Cnt == 200) //  0.01s * 200 = 2s
@@ -44,12 +44,12 @@ SIGNAL(TIMER0_OVF_vect)
 		dir^=1;      //  방향 전환
 		timer0Cnt=0; //  timer0Cnt 카운터 초기화
 	}
-	sei();
+	sei();           // 전체 인터럽트를 허용
 }
 
 SIGNAL(TIMER1_OVF_vect)
 {
-	cli();
+	cli();                 // 전체 인터럽트를 금지
 	TCNT1H=0xFB;           //  22ms
 	TCNT1L=0x0D;
 	PORTD = Step[mot_cnt]; //  1 -2상 여자 방식 한 스텝 진행
@@ -58,6 +58,6 @@ SIGNAL(TIMER1_OVF_vect)
 		if(mot_cnt++==7) mot_cnt=0;  //  스텝 카운터 증가
 	}
 	else if(mot_cnt--==0) mot_cnt=7; //  스텝 카운터 감소
-	sei();
+	sei();                 // 전체 인터럽트를 허용
 }
 
