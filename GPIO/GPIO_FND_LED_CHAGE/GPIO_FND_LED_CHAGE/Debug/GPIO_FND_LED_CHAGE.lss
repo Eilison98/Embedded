@@ -1,0 +1,304 @@
+
+GPIO_FND_LED_CHAGE.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000012  00800100  00000164  000001d8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000164  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001ea  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000021c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  0000025c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000091c  00000000  00000000  00000284  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000856  00000000  00000000  00000ba0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000304  00000000  00000000  000013f6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000044  00000000  00000000  000016fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000043d  00000000  00000000  00001740  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000165  00000000  00000000  00001b7d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  00001ce2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	58 c0       	rjmp	.+176    	; 0xb6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	56 c0       	rjmp	.+172    	; 0xb6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	54 c0       	rjmp	.+168    	; 0xb6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	52 c0       	rjmp	.+164    	; 0xb6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	50 c0       	rjmp	.+160    	; 0xb6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	4e c0       	rjmp	.+156    	; 0xb6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4c c0       	rjmp	.+152    	; 0xb6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4a c0       	rjmp	.+148    	; 0xb6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	48 c0       	rjmp	.+144    	; 0xb6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	46 c0       	rjmp	.+140    	; 0xb6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	44 c0       	rjmp	.+136    	; 0xb6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	42 c0       	rjmp	.+132    	; 0xb6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	40 c0       	rjmp	.+128    	; 0xb6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	3e c0       	rjmp	.+124    	; 0xb6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3c c0       	rjmp	.+120    	; 0xb6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3a c0       	rjmp	.+116    	; 0xb6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	38 c0       	rjmp	.+112    	; 0xb6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	36 c0       	rjmp	.+108    	; 0xb6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	34 c0       	rjmp	.+104    	; 0xb6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	32 c0       	rjmp	.+100    	; 0xb6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	30 c0       	rjmp	.+96     	; 0xb6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	2e c0       	rjmp	.+92     	; 0xb6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2c c0       	rjmp	.+88     	; 0xb6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2a c0       	rjmp	.+84     	; 0xb6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	28 c0       	rjmp	.+80     	; 0xb6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	26 c0       	rjmp	.+76     	; 0xb6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	24 c0       	rjmp	.+72     	; 0xb6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	22 c0       	rjmp	.+68     	; 0xb6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	20 c0       	rjmp	.+64     	; 0xb6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1e c0       	rjmp	.+60     	; 0xb6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1a c0       	rjmp	.+52     	; 0xb6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	18 c0       	rjmp	.+48     	; 0xb6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	16 c0       	rjmp	.+44     	; 0xb6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e4 e6       	ldi	r30, 0x64	; 100
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 31       	cpi	r26, 0x12	; 18
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	1b d0       	rcall	.+54     	; 0xea <main>
+  b4:	55 c0       	rjmp	.+170    	; 0x160 <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	a4 cf       	rjmp	.-184    	; 0x0 <__vectors>
+
+000000b8 <Count_TR>:
+}
+
+// 스위치 누른 상태에 따라 증감 감소를 값을 반환하는 함수
+int Count_TR(unsigned char flag) {
+	int count = 0;
+	switch (flag) {
+  b8:	82 30       	cpi	r24, 0x02	; 2
+  ba:	59 f0       	breq	.+22     	; 0xd2 <Count_TR+0x1a>
+  bc:	18 f4       	brcc	.+6      	; 0xc4 <Count_TR+0xc>
+  be:	81 30       	cpi	r24, 0x01	; 1
+  c0:	89 f0       	breq	.+34     	; 0xe4 <Count_TR+0x2c>
+  c2:	04 c0       	rjmp	.+8      	; 0xcc <Count_TR+0x14>
+  c4:	84 30       	cpi	r24, 0x04	; 4
+  c6:	41 f0       	breq	.+16     	; 0xd8 <Count_TR+0x20>
+  c8:	88 30       	cpi	r24, 0x08	; 8
+  ca:	49 f0       	breq	.+18     	; 0xde <Count_TR+0x26>
+	}
+}
+
+// 스위치 누른 상태에 따라 증감 감소를 값을 반환하는 함수
+int Count_TR(unsigned char flag) {
+	int count = 0;
+  cc:	80 e0       	ldi	r24, 0x00	; 0
+  ce:	90 e0       	ldi	r25, 0x00	; 0
+  d0:	08 95       	ret
+	switch (flag) {
+		case 0x01: // SW0을 눌렀을때
+		count = 1;
+		break;
+		case 0x02: // SW1을 눌렀을때
+		count = 2;
+  d2:	82 e0       	ldi	r24, 0x02	; 2
+  d4:	90 e0       	ldi	r25, 0x00	; 0
+		break;
+  d6:	08 95       	ret
+		case 0x04: // SW2을 눌렀을때
+		count = -1;
+  d8:	8f ef       	ldi	r24, 0xFF	; 255
+  da:	9f ef       	ldi	r25, 0xFF	; 255
+		break;
+  dc:	08 95       	ret
+		case 0x08: // SW3을 눌렀을때
+		count = -2;
+  de:	8e ef       	ldi	r24, 0xFE	; 254
+  e0:	9f ef       	ldi	r25, 0xFF	; 255
+		break;
+  e2:	08 95       	ret
+// 스위치 누른 상태에 따라 증감 감소를 값을 반환하는 함수
+int Count_TR(unsigned char flag) {
+	int count = 0;
+	switch (flag) {
+		case 0x01: // SW0을 눌렀을때
+		count = 1;
+  e4:	81 e0       	ldi	r24, 0x01	; 1
+  e6:	90 e0       	ldi	r25, 0x00	; 0
+		break;
+		case 0x08: // SW3을 눌렀을때
+		count = -2;
+		break;
+	} return count;
+  e8:	08 95       	ret
+
+000000ea <main>:
+#include <util/delay.h>
+
+int Count_TR(unsigned char flag);
+
+int main(void)
+{
+  ea:	cf 93       	push	r28
+  ec:	df 93       	push	r29
+  ee:	cd b7       	in	r28, 0x3d	; 61
+  f0:	de b7       	in	r29, 0x3e	; 62
+  f2:	62 97       	sbiw	r28, 0x12	; 18
+  f4:	0f b6       	in	r0, 0x3f	; 63
+  f6:	f8 94       	cli
+  f8:	de bf       	out	0x3e, r29	; 62
+  fa:	0f be       	out	0x3f, r0	; 63
+  fc:	cd bf       	out	0x3d, r28	; 61
+	// 7-Segment 에 표시할 글자의 입력 데이터를 저장
+	unsigned char FND_DATA_TBL []={0x3F,0X06,0X5B,0X4F,0X66,0X6D,
+  fe:	82 e1       	ldi	r24, 0x12	; 18
+ 100:	e0 e0       	ldi	r30, 0x00	; 0
+ 102:	f1 e0       	ldi	r31, 0x01	; 1
+ 104:	de 01       	movw	r26, r28
+ 106:	11 96       	adiw	r26, 0x01	; 1
+ 108:	01 90       	ld	r0, Z+
+ 10a:	0d 92       	st	X+, r0
+ 10c:	8a 95       	dec	r24
+ 10e:	e1 f7       	brne	.-8      	; 0x108 <main+0x1e>
+	unsigned int cnt=0;
+	
+	// 스위치 값 저장 변수
+	unsigned char Switch_flag = 0;
+	
+	DDRA = 0xFF; // 포트A 를 출력포트로 설정
+ 110:	8f ef       	ldi	r24, 0xFF	; 255
+ 112:	8a bb       	out	0x1a, r24	; 26
+	DDRE = 0x00; // 포트E 를 입력포트로 설정
+ 114:	12 b8       	out	0x02, r1	; 2
+	unsigned char FND_DATA_TBL []={0x3F,0X06,0X5B,0X4F,0X66,0X6D,
+							       0X7C,0X07,0X7F,0X67,0X77,0X7C,
+								   0X39,0X5E,0X79,0X71,0X08,0X80};
+	
+	// FND Table 카운터 변수							   
+	unsigned int cnt=0;
+ 116:	00 e0       	ldi	r16, 0x00	; 0
+ 118:	10 e0       	ldi	r17, 0x00	; 0
+	DDRA = 0xFF; // 포트A 를 출력포트로 설정
+	DDRE = 0x00; // 포트E 를 입력포트로 설정
+	
+	while (1) {
+		// 입력핀이 포트 E 의 상위 비트이므로 우측으로 4비트 쉬프트
+		Switch_flag = PINE >> 4;
+ 11a:	81 b1       	in	r24, 0x01	; 1
+ 11c:	82 95       	swap	r24
+ 11e:	8f 70       	andi	r24, 0x0F	; 15
+		while(PINE >> 4 != 0x00); // 스위치를 눌렀을 경우 땔 때까지 대기
+ 120:	91 b1       	in	r25, 0x01	; 1
+ 122:	92 95       	swap	r25
+ 124:	9f 70       	andi	r25, 0x0F	; 15
+ 126:	e1 f7       	brne	.-8      	; 0x120 <main+0x36>
+		if(Switch_flag != 0)// 스위치가 눌렀을 경우에 만 실행
+ 128:	88 23       	and	r24, r24
+ 12a:	19 f0       	breq	.+6      	; 0x132 <main+0x48>
+		// 스위치 튼에 따라 변수 cnt 값을 증가 또는 감소
+		cnt += Count_TR(Switch_flag);
+ 12c:	c5 df       	rcall	.-118    	; 0xb8 <Count_TR>
+ 12e:	08 0f       	add	r16, r24
+ 130:	19 1f       	adc	r17, r25
+		// 변수 cnt 값의 범위를 0 ~ 15로 설정
+		if(cnt < 0)
+		cnt = 0;
+		else if(cnt > 15)
+ 132:	00 31       	cpi	r16, 0x10	; 16
+ 134:	11 05       	cpc	r17, r1
+ 136:	10 f0       	brcs	.+4      	; 0x13c <main+0x52>
+		cnt = 15;
+ 138:	0f e0       	ldi	r16, 0x0F	; 15
+ 13a:	10 e0       	ldi	r17, 0x00	; 0
+		PORTA = FND_DATA_TBL[cnt]; // 포트 A 에 FND Table 값을 출력
+ 13c:	e1 e0       	ldi	r30, 0x01	; 1
+ 13e:	f0 e0       	ldi	r31, 0x00	; 0
+ 140:	ec 0f       	add	r30, r28
+ 142:	fd 1f       	adc	r31, r29
+ 144:	e0 0f       	add	r30, r16
+ 146:	f1 1f       	adc	r31, r17
+ 148:	80 81       	ld	r24, Z
+ 14a:	8b bb       	out	0x1b, r24	; 27
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 14c:	2f ea       	ldi	r18, 0xAF	; 175
+ 14e:	84 e4       	ldi	r24, 0x44	; 68
+ 150:	92 e0       	ldi	r25, 0x02	; 2
+ 152:	21 50       	subi	r18, 0x01	; 1
+ 154:	80 40       	sbci	r24, 0x00	; 0
+ 156:	90 40       	sbci	r25, 0x00	; 0
+ 158:	e1 f7       	brne	.-8      	; 0x152 <main+0x68>
+ 15a:	00 c0       	rjmp	.+0      	; 0x15c <main+0x72>
+ 15c:	00 00       	nop
+ 15e:	dd cf       	rjmp	.-70     	; 0x11a <main+0x30>
+
+00000160 <_exit>:
+ 160:	f8 94       	cli
+
+00000162 <__stop_program>:
+ 162:	ff cf       	rjmp	.-2      	; 0x162 <__stop_program>

@@ -1,0 +1,238 @@
+
+GPIO_LED_TIME.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000188  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000134  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000188  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001b8  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  000001f8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000954  00000000  00000000  00000218  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000080f  00000000  00000000  00000b6c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002ea  00000000  00000000  0000137b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00001668  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000041e  00000000  00000000  0000168c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    0000012c  00000000  00000000  00001aaa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000010  00000000  00000000  00001bd6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
+   6:	00 00       	nop
+   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
+   a:	00 00       	nop
+   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
+   e:	00 00       	nop
+  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
+  12:	00 00       	nop
+  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
+  16:	00 00       	nop
+  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
+  22:	00 00       	nop
+  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
+  26:	00 00       	nop
+  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
+  32:	00 00       	nop
+  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
+  36:	00 00       	nop
+  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
+  42:	00 00       	nop
+  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
+  46:	00 00       	nop
+  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
+  52:	00 00       	nop
+  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
+  56:	00 00       	nop
+  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
+  62:	00 00       	nop
+  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
+  66:	00 00       	nop
+  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
+  72:	00 00       	nop
+  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
+  76:	00 00       	nop
+  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
+  82:	00 00       	nop
+  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
+  86:	00 00       	nop
+  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	02 d0       	rcall	.+4      	; 0x9e <main>
+  9a:	4a c0       	rjmp	.+148    	; 0x130 <_exit>
+
+0000009c <__bad_interrupt>:
+  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+
+0000009e <main>:
+
+int main(void)
+{
+	unsigned char Switch_flag = 0, Switch_flag_pre = 0x01;
+	
+	DDRC = 0x0F; // 포트C 를 출력포트로 설정
+  9e:	8f e0       	ldi	r24, 0x0F	; 15
+  a0:	84 bb       	out	0x14, r24	; 20
+	DDRE = 0x00; // 포트E 를 입력포트로 설정
+  a2:	12 b8       	out	0x02, r1	; 2
+#include <avr/io.h> //AVR 입출력에 대한 헤더 파일
+#include <util/delay.h> //delay 함수사용을 위한 헤더파일
+
+int main(void)
+{
+	unsigned char Switch_flag = 0, Switch_flag_pre = 0x01;
+  a4:	91 e0       	ldi	r25, 0x01	; 1
+	
+	while (1)
+	{
+		// 포트 E 로 입력받은 값을 변수 Switch_flag에 저장
+		// 입력핀이 포트 E 의 상위 비트이므로 우측으로 4비트 쉬프트
+		Switch_flag = PINE >> 4;
+  a6:	81 b1       	in	r24, 0x01	; 1
+  a8:	82 95       	swap	r24
+  aa:	8f 70       	andi	r24, 0x0F	; 15
+		// SW0 ~ 4 스위치중 하나만 눌렸을때
+		if((Switch_flag == 0x01) || (Switch_flag == 0x02) ||
+  ac:	2f ef       	ldi	r18, 0xFF	; 255
+  ae:	28 0f       	add	r18, r24
+  b0:	22 30       	cpi	r18, 0x02	; 2
+  b2:	28 f0       	brcs	.+10     	; 0xbe <main+0x20>
+  b4:	84 30       	cpi	r24, 0x04	; 4
+  b6:	29 f0       	breq	.+10     	; 0xc2 <main+0x24>
+		(Switch_flag == 0x04) || (Switch_flag == 0x08))
+  b8:	88 30       	cpi	r24, 0x08	; 8
+  ba:	31 f4       	brne	.+12     	; 0xc8 <main+0x2a>
+  bc:	04 c0       	rjmp	.+8      	; 0xc6 <main+0x28>
+		{
+			// 눌린 상태 Switch_flag 값을 변수 Switch_flag_pre에 저장
+			Switch_flag_pre = Switch_flag;
+  be:	98 2f       	mov	r25, r24
+  c0:	03 c0       	rjmp	.+6      	; 0xc8 <main+0x2a>
+  c2:	98 2f       	mov	r25, r24
+  c4:	01 c0       	rjmp	.+2      	; 0xc8 <main+0x2a>
+  c6:	98 2f       	mov	r25, r24
+		}
+		// PORTC(LED가 연결된 포트)의 하위 4비트를 반전
+		PORTC ^= 0x0F;
+  c8:	25 b3       	in	r18, 0x15	; 21
+  ca:	8f e0       	ldi	r24, 0x0F	; 15
+  cc:	82 27       	eor	r24, r18
+  ce:	85 bb       	out	0x15, r24	; 21
+		if(Switch_flag_pre == 0x01) // SW0을 눌렀을때
+  d0:	91 30       	cpi	r25, 0x01	; 1
+  d2:	51 f4       	brne	.+20     	; 0xe8 <main+0x4a>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  d4:	27 eb       	ldi	r18, 0xB7	; 183
+  d6:	3b ea       	ldi	r19, 0xAB	; 171
+  d8:	85 e0       	ldi	r24, 0x05	; 5
+  da:	21 50       	subi	r18, 0x01	; 1
+  dc:	30 40       	sbci	r19, 0x00	; 0
+  de:	80 40       	sbci	r24, 0x00	; 0
+  e0:	e1 f7       	brne	.-8      	; 0xda <main+0x3c>
+  e2:	00 c0       	rjmp	.+0      	; 0xe4 <main+0x46>
+  e4:	00 00       	nop
+  e6:	df cf       	rjmp	.-66     	; 0xa6 <main+0x8>
+		_delay_ms(250); // 250ms 시간지연
+		else if(Switch_flag_pre == 0x02) // SW1을 눌렀을때
+  e8:	92 30       	cpi	r25, 0x02	; 2
+  ea:	51 f4       	brne	.+20     	; 0x100 <main+0x62>
+  ec:	2f e6       	ldi	r18, 0x6F	; 111
+  ee:	37 e5       	ldi	r19, 0x57	; 87
+  f0:	8b e0       	ldi	r24, 0x0B	; 11
+  f2:	21 50       	subi	r18, 0x01	; 1
+  f4:	30 40       	sbci	r19, 0x00	; 0
+  f6:	80 40       	sbci	r24, 0x00	; 0
+  f8:	e1 f7       	brne	.-8      	; 0xf2 <main+0x54>
+  fa:	00 c0       	rjmp	.+0      	; 0xfc <main+0x5e>
+  fc:	00 00       	nop
+  fe:	d3 cf       	rjmp	.-90     	; 0xa6 <main+0x8>
+		_delay_ms(500); // 500ms 시간지연
+		else if(Switch_flag_pre == 0x04) // SW2을 눌렀을때
+ 100:	94 30       	cpi	r25, 0x04	; 4
+ 102:	51 f4       	brne	.+20     	; 0x118 <main+0x7a>
+ 104:	27 e2       	ldi	r18, 0x27	; 39
+ 106:	33 e0       	ldi	r19, 0x03	; 3
+ 108:	81 e1       	ldi	r24, 0x11	; 17
+ 10a:	21 50       	subi	r18, 0x01	; 1
+ 10c:	30 40       	sbci	r19, 0x00	; 0
+ 10e:	80 40       	sbci	r24, 0x00	; 0
+ 110:	e1 f7       	brne	.-8      	; 0x10a <main+0x6c>
+ 112:	00 c0       	rjmp	.+0      	; 0x114 <main+0x76>
+ 114:	00 00       	nop
+ 116:	c7 cf       	rjmp	.-114    	; 0xa6 <main+0x8>
+		_delay_ms(750); // 750ms 시간지연
+		else if(Switch_flag_pre == 0x08) // SW3을 눌렀을때
+ 118:	98 30       	cpi	r25, 0x08	; 8
+ 11a:	29 f6       	brne	.-118    	; 0xa6 <main+0x8>
+ 11c:	2f ed       	ldi	r18, 0xDF	; 223
+ 11e:	3e ea       	ldi	r19, 0xAE	; 174
+ 120:	86 e1       	ldi	r24, 0x16	; 22
+ 122:	21 50       	subi	r18, 0x01	; 1
+ 124:	30 40       	sbci	r19, 0x00	; 0
+ 126:	80 40       	sbci	r24, 0x00	; 0
+ 128:	e1 f7       	brne	.-8      	; 0x122 <main+0x84>
+ 12a:	00 c0       	rjmp	.+0      	; 0x12c <main+0x8e>
+ 12c:	00 00       	nop
+ 12e:	bb cf       	rjmp	.-138    	; 0xa6 <main+0x8>
+
+00000130 <_exit>:
+ 130:	f8 94       	cli
+
+00000132 <__stop_program>:
+ 132:	ff cf       	rjmp	.-2      	; 0x132 <__stop_program>
