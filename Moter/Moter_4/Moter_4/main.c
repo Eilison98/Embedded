@@ -10,7 +10,7 @@ volatile unsigned char dir=DIR_R; //  처음 방향은 우측부터
 
 //  여자 값을 사용
 unsigned char Step[] = { 0x90, 0x80, 0xC0, 0x40, 0x60, 0x20, 0x30, 0x10 };
-
+   
 SIGNAL(TIMER0_OVF_vect); //  Timer0 Overflow0 ISP
 SIGNAL(TIMER1_OVF_vect); //  Timer1 Overflow1 ISP
 

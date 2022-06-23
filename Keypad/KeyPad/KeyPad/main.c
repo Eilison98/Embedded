@@ -21,9 +21,9 @@ void Init()
 	DDRA = 0xF8;	//상위 5비트는 출력(Row:가로) 하위 3비트는 입력(Cow:세로)
 	DDRB = 0xFF;
 }
-
+  
 //unsigned int keyScan()
-//{
+//{  
 ////R0
 //PORTA = 0xF7;	// 0b 1111 0111
 //if(PINA == 0xFE) return 1;		//C0	0b 1111 1110
