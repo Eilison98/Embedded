@@ -9,5 +9,6 @@
 - 타이머 / 카운터 16Bit
 - PIEZO
 - UART
+- MOTER
 
 <br/>
