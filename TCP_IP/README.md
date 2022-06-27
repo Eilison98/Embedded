@@ -1,15 +1,11 @@
-# Embedded
+# TCP/IP 공부정리
 
 <br/>
 
-## Study List
-- GPIO 입출력 제어
-- 인터럽트
-- 타이머 / 카운터 8Bit
-- 타이머 / 카운터 16Bit
-- PWD
-- PIEZO
-- UART
-- MOTER
+## 네트워크 프로그래밍에서 연결요청을 허용하는 소켓의 생성과정
+- Socket()   : 전화기 구매
+- bind()     : 전화번호 부여
+- listen()   : 개통
+- accept()   : 연결
+- read/write : 통화
 
-<br/>
