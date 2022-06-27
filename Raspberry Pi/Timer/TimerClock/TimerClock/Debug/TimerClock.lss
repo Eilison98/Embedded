@@ -1,0 +1,238 @@
+
+TimerClock.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000012  00800100  00000140  000001d4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000140  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000002  00800112  00800112  000001e6  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000001e6  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000218  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000028  00000000  00000000  00000258  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000870  00000000  00000000  00000280  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000007b0  00000000  00000000  00000af0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000027f  00000000  00000000  000012a0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000044  00000000  00000000  00001520  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000003e4  00000000  00000000  00001564  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000003c  00000000  00000000  00001948  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000018  00000000  00000000  00001984  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	60 c0       	rjmp	.+192    	; 0xc6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	59 c0       	rjmp	.+178    	; 0xf0 <__vector_15>
+  3e:	00 00       	nop
+  40:	42 c0       	rjmp	.+132    	; 0xc6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e0 e4       	ldi	r30, 0x40	; 64
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 31       	cpi	r26, 0x12	; 18
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a2 e1       	ldi	r26, 0x12	; 18
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a4 31       	cpi	r26, 0x14	; 20
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	02 d0       	rcall	.+4      	; 0xc8 <main>
+  c4:	3b c0       	rjmp	.+118    	; 0x13c <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <main>:
+volatile unsigned char time_s=0; // 초를 세는 변수
+unsigned char timer0Cnt=0;
+
+int main(void)
+{
+   DDRA = 0xFF; // 포트A 를 출력포트로 설정
+  c8:	8f ef       	ldi	r24, 0xFF	; 255
+  ca:	8a bb       	out	0x1a, r24	; 26
+   TCCR0 = 0x07; // 프리스케일러 1024
+  cc:	87 e0       	ldi	r24, 0x07	; 7
+  ce:	83 bf       	out	0x33, r24	; 51
+   OCR0 = 144; // 0.01초 마다 한번씩 인터럽트 발생
+  d0:	80 e9       	ldi	r24, 0x90	; 144
+  d2:	81 bf       	out	0x31, r24	; 49
+   TIMSK = 0x02; // 출력비교 인터럽트 활성화
+  d4:	82 e0       	ldi	r24, 0x02	; 2
+  d6:	87 bf       	out	0x37, r24	; 55
+   TIFR |=1 << OCF0;
+  d8:	86 b7       	in	r24, 0x36	; 54
+  da:	82 60       	ori	r24, 0x02	; 2
+  dc:	86 bf       	out	0x36, r24	; 54
+   sei();
+  de:	78 94       	sei
+   while (1)
+   {
+	   PORTA = FND_DATA_TBL[time_s]; //포트A에 FND Table 값을 출력
+  e0:	e0 91 13 01 	lds	r30, 0x0113	; 0x800113 <time_s>
+  e4:	f0 e0       	ldi	r31, 0x00	; 0
+  e6:	e0 50       	subi	r30, 0x00	; 0
+  e8:	ff 4f       	sbci	r31, 0xFF	; 255
+  ea:	80 81       	ld	r24, Z
+  ec:	8b bb       	out	0x1b, r24	; 27
+  ee:	f8 cf       	rjmp	.-16     	; 0xe0 <main+0x18>
+
+000000f0 <__vector_15>:
+   } return 0;
+}
+
+SIGNAL(TIMER0_COMP_vect)
+{
+  f0:	1f 92       	push	r1
+  f2:	0f 92       	push	r0
+  f4:	0f b6       	in	r0, 0x3f	; 63
+  f6:	0f 92       	push	r0
+  f8:	11 24       	eor	r1, r1
+  fa:	8f 93       	push	r24
+	cli();
+  fc:	f8 94       	cli
+	OCR0 += 144; // 0.01초 후에 인터럽트 발생
+  fe:	81 b7       	in	r24, 0x31	; 49
+ 100:	80 57       	subi	r24, 0x70	; 112
+ 102:	81 bf       	out	0x31, r24	; 49
+	timer0Cnt++; // timer0Cnt 변수 1 증가
+ 104:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <__data_end>
+ 108:	8f 5f       	subi	r24, 0xFF	; 255
+ 10a:	80 93 12 01 	sts	0x0112, r24	; 0x800112 <__data_end>
+	// 0.01s * 100 = 1s // 1초를 얻기 위한 카운트 횟수
+	if(timer0Cnt == 100)
+ 10e:	84 36       	cpi	r24, 0x64	; 100
+ 110:	71 f4       	brne	.+28     	; 0x12e <__vector_15+0x3e>
+	{
+		if(time_s >= 16)
+ 112:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <time_s>
+ 116:	80 31       	cpi	r24, 0x10	; 16
+ 118:	18 f0       	brcs	.+6      	; 0x120 <__vector_15+0x30>
+		time_s = 0; // time_s 변수는 16까지만 증가
+ 11a:	10 92 13 01 	sts	0x0113, r1	; 0x800113 <time_s>
+ 11e:	05 c0       	rjmp	.+10     	; 0x12a <__vector_15+0x3a>
+		else time_s++; // 16되면 0으로 초기화
+ 120:	80 91 13 01 	lds	r24, 0x0113	; 0x800113 <time_s>
+ 124:	8f 5f       	subi	r24, 0xFF	; 255
+ 126:	80 93 13 01 	sts	0x0113, r24	; 0x800113 <time_s>
+		timer0Cnt=0;
+ 12a:	10 92 12 01 	sts	0x0112, r1	; 0x800112 <__data_end>
+	} sei();
+ 12e:	78 94       	sei
+}
+ 130:	8f 91       	pop	r24
+ 132:	0f 90       	pop	r0
+ 134:	0f be       	out	0x3f, r0	; 63
+ 136:	0f 90       	pop	r0
+ 138:	1f 90       	pop	r1
+ 13a:	18 95       	reti
+
+0000013c <_exit>:
+ 13c:	f8 94       	cli
+
+0000013e <__stop_program>:
+ 13e:	ff cf       	rjmp	.-2      	; 0x13e <__stop_program>
