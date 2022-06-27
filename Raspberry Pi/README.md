@@ -2,6 +2,16 @@
 
 <br/>
 
+## Raspberry Pi
+- GPIO 입출력 제어
+- 인터럽트
+- 타이머 / 카운터 8Bit
+- 타이머 / 카운터 16Bit
+- PWD
+- PIEZO
+- UART
+- MOTER
+
 ## AVR 마이크로 컨트롤러의 입출략 포트
 - 입출력 포트 제어용 레지스터
   - DDRx 레지스터
