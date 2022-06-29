@@ -24,6 +24,9 @@
   -  안전성이 확보되어 있지않음
   -  전달한 패킷이 잘도착하였는지 확인하는 절차가 없다
   -  속도가 빠르다. <게임, 실시간 스트리밍이 많이 쓰는것 같다.>
+
+<br/>
+
 - 소켓
   - 추상화 개념?
   - A와 B의 소켓의 운영체제와 하드웨어는 다르지만 소켓으로 통신을한다
@@ -39,5 +42,18 @@
         - connect -> Listen 과정이 일어남 / 서버로 접속시도
           - send / recv ( 와 보내고 주고 받는 과정을 가짐 )
 
+<br/>
+
+- af : 네트워크 주소 체계
+  - #define AF_INET 2       //  IPv4
+  - #define AF_INET6        //  IPv6
+- type : 소켓 타입
+  - #define SOCK_STREAM 1   //       스트림, TCP 프로토콜의 전송 방식
+  - #define SOCK_DGRAM  2   //  데이터 그램, UDP 프로토콜의 전송 방식
+  - #define SOCK_RAW    3   //  RAW 소켓, 가공하지 않는 소켓
+- protocol : 프로토콜
+  - #define IPPROTO_TCP 6   //  TCP 프로토콜
+  - #define IPPROTO_UDP 17  //  UDP 프로토콜
+  - #define IPPROTO_RAW 255 //  RAW
 
 <br/>
