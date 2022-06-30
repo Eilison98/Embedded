@@ -6,13 +6,18 @@
  */ 
 
 #define F_CPU 7372800UL
+
+// 표준라이브러리
 #include <avr/io.h>
 #include <avr/delay.h>
 #include <util/delay.h>
+
+//  Lcd.h 헤더파일
 #include "Lcd.h"
 
 unsigned char keyscan();
 
+//  비동기화 송수신기 상태
 void UART_Condition()
 {
 	DDRE = 0xfe;
@@ -23,11 +28,13 @@ void UART_Condition()
 	UBRR0H = 0x00;
 	UBRR0L = 3;
 }
+
 void init_keypad()
 {
 	DDRA = 0xF8; //0b 1111 1000
 	PORTA = 0x07; //0b 0000 0111
 }
+
 void putch(unsigned char data)
 {
 	while((UCSR0A & 0x20)==0);
