@@ -22,13 +22,45 @@ void * recv_message(void * arg);
 //  입력할 메시지?
 char message[BUFFSIZE];
 
+void * rcv(void * arg)
+{
+	printf("Rcv Thread Created\n");
+	int sock = (int)arg;
+	char buff[500];
+	int len;
+	while(1)
+	{
+		len = read(sock, buff, sizeof(buff));
+
+		if(len == -1)
+		{
+			printf("sock close\n");
+			break;
+		}
+
+		printf("%s", buff);
+	}
+	pthread_exit(0);
+	return 0;
+}
+
 int main(int argc, char **argv)
 {
 	//  소켓 서버
 	int sock;
 	struct sockaddr_in serv_addr;
-	pthread_t snd_thread, rcv_thread;
+	pthread_t rcv_thread;
 	void* thread_result;
+
+	char id[100];
+
+	if(argc < 2)
+	{
+		printf("You have to Enter ID\n");
+		return 0;
+	}
+	strcpy(id, argv[1]);
+	printf("id : %s\n", id);
 
 	sock = socket(PF_INET, SOCK_STREAM, 0);
 	if(sock == -1)
@@ -48,22 +80,26 @@ int main(int argc, char **argv)
 		printf("connection success\n");
 	}
 
-	unsigned char msg[100] = {0x01, 2, 3, 4, 5, 6, 1, 2, 3, 4, 2, 1, 2, 3, 0x0c};
-	unsigned char msg1[100] = {1, 3 ,5 , 5, 7, 8, 9, 3, 5};
-	unsigned char msg2[100] = {1, 2, 4, 5, 6, 7, 1, 9, 2, 3, 4, 6, 2, 2, 5, 3, 2};
+	pthread_create(&rcv_thread, NULL, rcv, (void *)sock);
+
+	char chat[100];
+	char msg[1000];
 
 	printf("while before\n");
 	while(1)
 	{
-		printf("send : \n");
-		write(sock, msg, 15);
-			sleep(1);
-		printf("send to : \n");
-		write(sock, msg1, 10);
-			sleep(1);
-		printf("send to do : \n");
-		write(sock, msg2, 20);
-			sleep(1);
+		//  안내문구
+		printf("채팅 입력 : ");
+
+		//  채팅을 받는다.
+		gets(chat);
+
+		//  아이디, 
+		sprintf(msg, "[%s] : %s\n", id, chat);
+
+		printf("send : %s", msg);
+		write(sock, msg, strlen(msg)+1);
+		sleep(1);
 	}
 
 	printf("while before\n");

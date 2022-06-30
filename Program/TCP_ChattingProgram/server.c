@@ -13,12 +13,73 @@
 //  Max_Person
 #define CLNT_MAX 10
 
+#define BUFFSIZE 200
+
 //  글로벌 클라이언트 소켓
 //  Gobal_Client Socket
 int g_clnt_socks[CLNT_MAX];
 
 //  클로벌 클라이언트 카운드
 int g_clnt_count = 0;
+
+pthread_mutex_t g_mutex;
+
+void send_all_clnt(char *msg, int my_sock)
+{
+	pthread_mutex_lock(&g_mutex);
+	for(int i = 0; i < g_clnt_count; i++)
+	{
+		//  내가 연략하는 클라이언트만 뺴고 전부 전송
+		if(g_clnt_socks[i] != my_sock)
+		{
+			printf("Send msg : %s", msg);
+			write(g_clnt_socks[i], msg, strlen(msg) + 1);
+		}
+	}
+	pthread_mutex_unlock(&g_mutex);
+}
+
+void * clnt_connection(void * arg)
+{
+	int clnt_sock = (int)arg;
+	int str_len = 0;
+
+	char msg[BUFFSIZE];
+	int i;
+
+	while(1)
+	{
+		//  읽어온다.
+		str_len = read(clnt_sock, msg, sizeof(msg));
+		if(str_len == -1)
+		{
+			printf("Client[%d] Close\n", clnt_sock);
+			break;
+		}
+		//  접속된 모든 클라이언트한테 읽은 내용을 전달한다.
+                send_all_clnt(msg, clnt_sock);
+		printf("%s\n", msg);
+	}
+	pthread_mutex_lock(&g_mutex);
+	close(clnt_sock);
+
+	for(int i = 0; i < g_clnt_count; i++)
+	{
+		if(clnt_sock == g_clnt_socks[i])
+		{
+				for(; i<g_clnt_count-1; i++)
+					g_clnt_socks[i] = g_clnt_socks[i + 1];
+					break;
+		}
+	}
+	g_clnt_socks[CLNT_MAX];
+	g_clnt_count = 0;
+	pthread_mutex_unlock(&g_mutex);
+
+	close(clnt_sock);
+	pthread_exit(0);
+	return NULL;
+}
 
 int main(int  argc, char ** argv)
 {
@@ -30,6 +91,8 @@ int main(int  argc, char ** argv)
 	//  clint socket
 	int clnt_sock;
 
+	pthread_t t_thread;
+
 	//  클라이언트 주소의 사이즈
 	int clnt_addr_size;
 
@@ -38,6 +101,8 @@ int main(int  argc, char ** argv)
 
 	//  서버
 	struct sockaddr_in serv_addr;
+
+	pthread_mutex_init(&g_mutex, NULL);
 
 	//  serv_sock 안에 소켓의 (네트워크 주소 체계와, 소켓타입, 프로토콜)을 저장한다.
 	//  마지막에 0은 소켓타입을 따라간다는 것이다.
@@ -96,6 +161,7 @@ int main(int  argc, char ** argv)
 		//  글로벌 클라이언트 소켓에 한명이 들어왔으므로 1증가 = 서버에 있는 클라이언트 소켓을 넣는다.
 		//  g_clnt_socks[g_clnt_count++] = clnt_sock;
 
+		/*
 		while(1)
 		{
 		//  얼마만큼 받아왔는지 = 클라이언트 소켓을 통해서 읽고, 받아올 데이터 넣는곳 , 최대 사이즈 200
@@ -112,5 +178,13 @@ int main(int  argc, char ** argv)
 			//  엔터
 			printf("\n");
 		}
+		*/
+
+		//  어센트에서 넘어오는 고객을 저장
+		pthread_mutex_lock(&g_mutex);
+		g_clnt_socks[g_clnt_count++] = clnt_sock;
+		pthread_mutex_unlock(&g_mutex);
+
+		pthread_create(&t_thread, NULL, clnt_connection, (void *)clnt_sock);
 	}
 }
