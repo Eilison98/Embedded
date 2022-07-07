@@ -1,10 +1,9 @@
 # Program
-- TCP/IP를 이용한 채팅프로그램
-  - 동시접속이 가능한 서버프로그램
-  - 클라이언트 입장시 클라이언트의 IP주소 반환
+- TCP/IP를 이용한 웹프로그램
+  - 웹창을 열어 클라이언트에게 사진을 보여주는 프로그램
 
 <br/>
 
 <p align = "center">
-<img src ="https://user-images.githubusercontent.com/93025344/177486748-bbae5d46-c356-4820-9624-e3a2ad1e3537.png" width="1000" height="700">
+<img src ="https://user-images.githubusercontent.com/93025344/177703923-21fd84c6-9cc9-44e0-90ba-b0d11bfb7447.png" width="1000" height="700">
 </p>
