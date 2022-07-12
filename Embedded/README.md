@@ -1,8 +1,8 @@
-# Raspberry Pi 공부 정리
+# Embedded 공부 정리
 
 <br/>
 
-## Raspberry Pi
+## Embedded
 - GPIO 입출력 제어
 - 인터럽트
 - 타이머 / 카운터 8Bit
