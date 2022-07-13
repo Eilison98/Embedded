@@ -1,6 +1,8 @@
 # Embedded Study List
 - Embedded 
+  - C언어 사용
 - TCP/IP      
+  - C언어 사용
 - RaspberryPi
   - Python언어 사용
   - PuTTY를 이용하여 원격으로 사용
