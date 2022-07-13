@@ -2,6 +2,8 @@
 - Embedded 
 - TCP/IP      
 - RaspberryPi
+  - Python언어 사용
+  - PuTTY를 이용하여 원격으로 사용
 
 <br/>
 
